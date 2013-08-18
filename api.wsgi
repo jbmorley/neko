@@ -13,14 +13,14 @@ CONFIG = os.path.join(ROOT, "config.json")
 if (not ROOT in sys.path):
   sys.path.insert(1, ROOT)
 
-import summary
+import status
 
 
 def application(environ, start_response):
 
   # Fetch the build status and return the appropriate JSON.
   start_response('200 OK', [('Content-type', 'application/json')])
-  checker = Checker(CONFIG)
+  checker = status.Checker(CONFIG)
   return [json.dumps(checker.update())]
 
 
