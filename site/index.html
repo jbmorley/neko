@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Neko</title>
@@ -6,18 +7,51 @@
     <style>
 
       body {
-        font-size: 40px;
+        font-size: 160px;
       }
 
-      ul {
-        list-style: none;
+      #container {
+
         margin: 0;
         padding: 0;
+        background-color: black;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flexbox;
+        display: box;
+
       }
 
-      li {
-        padding: 20px;
-        display: inline-block;
+      .item {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+
+        display: -webkit-flexbox;
+        -webkit-flex-align: center;
+        -webkit-flex-pack: center;
+
+        display: -moz-box;
+        -moz-box-align: center;
+        -moz-box-pack: center;
+
+        display: -ms-flexbox;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+
+        display: box;
+        box-align: center;
+        box-pack: center;
       }
 
       .red {
@@ -54,12 +88,13 @@
             'class': icon
           });
 
-          var item = $('<li />', {
+          var item = $('<div />', {
             'id': identifier,
+            'class': 'item'
           });
 
           item.append(i);
-          $('#list').append(item);
+          $('#container').append(item);
           return item;
         };
 
@@ -92,9 +127,7 @@
     </script>
   </head>
   <body>
-    <div id="content">
-      <ul id="list">
-      </ul>
+    <div id="container">
     </div>
   </body>
 </html>
