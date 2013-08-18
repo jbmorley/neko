@@ -34,7 +34,7 @@ The specifics of your configuration will depend on the location of your install 
 Configuration
 -------------
 
-The Hudson and Jenkins projects to check are specified config.json located in the root, alongside api.wsgi.  Individual projects are defined as a list of Hudson or Jenkins build jobs.  Each job can be tagged with as a build or test job and optional authentication details can be provided.
+The Hudson and Jenkins projects to check are specified in `config.json` located in the root, alongside `api.wsgi`.  Individual projects are defined as a list of Hudson or Jenkins build jobs.  Each job can be tagged with as a build or test job and optional authentication details can be provided.
 
     {
       "version": 1,
