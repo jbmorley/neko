@@ -137,15 +137,3 @@ class Job:
 
     return state
 
-
-def main():
-  """Run the script."""
-  parser = argparse.ArgumentParser(description = 'Summarize the status of a collection of builds.')
-  parser.add_argument("configuration", help = 'Configuration file specifying the build jobs to check.')
-  options = parser.parse_args()
-
-  checker = Checker(options.configuration)
-  print json.dumps(checker.update())
-
-if __name__ == "__main__":
-  main()

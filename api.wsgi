@@ -13,7 +13,7 @@ CONFIG = os.path.join(ROOT, "config.json")
 if (not ROOT in sys.path):
   sys.path.insert(1, ROOT)
 
-from summary import Checker, Project, Job
+import summary
 
 
 def application(environ, start_response):
