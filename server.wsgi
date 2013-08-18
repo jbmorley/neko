@@ -9,6 +9,7 @@ import sys
 
 # Ensure the current directory is in the include path under mod_wsgi.
 ROOT = os.path.join(os.path.dirname(__file__))
+CONFIG = os.path.join(ROOT, "config.json")
 if (not ROOT in sys.path):
   sys.path.insert(1, ROOT)
 
@@ -19,7 +20,7 @@ def application(environ, start_response):
 
   # Fetch the build status and return the appropriate JSON.
   start_response('200 OK', [('Content-type', 'application/json')])
-  checker = Checker("/home/jbmorley/configuration.json")
+  checker = Checker(CONFIG)
   return [json.dumps(checker.update())]
 
 
