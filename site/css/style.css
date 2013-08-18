@@ -36,16 +36,17 @@ body {
   right: 0;
 
   display: -webkit-box;
-  display: -moz-box;
   display: -webkit-flexbox;
-  display: box;
+  display: -ms-flexbox;
+  display: flex;
 
 }
 
 .item {
   -webkit-box-flex: 1;
-  -moz-box-flex: 1;
   -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 
   display: -webkit-box;
   -webkit-box-align: center;
@@ -55,17 +56,14 @@ body {
   -webkit-flex-align: center;
   -webkit-flex-pack: center;
 
-  display: -moz-box;
-  -moz-box-align: center;
-  -moz-box-pack: center;
-
   display: -ms-flexbox;
   -ms-flex-align: center;
   -ms-flex-pack: center;
 
-  display: box;
-  box-align: center;
-  box-pack: center;
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+
 }
 
 .red {
