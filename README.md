@@ -82,3 +82,9 @@ Each job must be tagged with as a build or test job and optional authentication 
 Things to bear in mind:
 - Hudson and Jenkins job URLs should include the 'api/json' extension
 - Icons are provided by [Font Awesome](http://fontawesome.io) and should be specified using appropriate class names (see the [cheatsheet](http://fontawesome.io/cheatsheet/))
+
+Thanks
+------
+- [Bootstrap](http://getbootstrap.com)
+- [Font Awesome](http://fontawesome.io)
+- [jQuery](http://jquery.org)
