@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) 2013 Jason Barrie Morley.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+body {
+  font-size: 160px;
+}
+
+#container {
+
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: box;
+
+}
+
+.item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+
+  display: -webkit-flexbox;
+  -webkit-flex-align: center;
+  -webkit-flex-pack: center;
+
+  display: -moz-box;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+
+  display: box;
+  box-align: center;
+  box-pack: center;
+}
+
+.red {
+  background-color: red;
+  color: #8B0000;
+}
+
+.amber {
+  background-color: orange;
+  color: #ff8c00;
+}
+
+.green {
+  background-color: #228B22;
+  color: #006400;
+}
