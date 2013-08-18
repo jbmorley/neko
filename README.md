@@ -1,7 +1,7 @@
 Neko
 ====
 
-Simple web-based status board for Hudson and Jenkins.
+Simple web-based status board for Hudson and Jenkins. Neko is a higher-fidelity version of the [cats](http://www.jbmorley.co.uk/blog/2012/09/23/continuous-integration/).
 
 Screenshots
 -----------
