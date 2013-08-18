@@ -1,26 +1,63 @@
 <html>
   <head>
     <title>Neko</title>
+    <style>
+
+      .red {
+        background-color: red;
+      }
+
+      .amber {
+        background-color: orange;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+    </style>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script>
+
       $(document).ready(function(){
 
-        function update() {
-          $.getJSON('api', function(data) {
-            $.each(data, function(index, value) {
-              $('li', {
-                'text': value['name']
-              }).appendTo('#list');
-            });
-          })
-          .success(function() { console.log("Success"); })
-          .error(function() { console.log("Error"); })
-          .complete(function() { console.log("Complete"); });
-        }
+        var getStatus = function(identifier) {
+          var element = $('#' + identifier);
+          if (element.length === 0) {
+            element = createStatus(identifier);
+          }
+          return element;
+        };
 
-        setTimeout(update, 1000);
+        var createStatus = function(identifier) {
+          var item = $('<li />', {
+            'text': identifier,
+            'id': identifier,
+          });
+          $('#list').append(item);
+          return item;
+        };
+
+        console.log("Beginning update...");
+        $.getJSON('api', function(data) {
+          $.each(data, function(index, value) {
+            var status = getStatus(value['name']);
+            var state = value['state'];
+            if (state === 0) {
+              status.addClass('red');
+            } else if (state === 1) {
+              status.addClass('amber');
+            } else if (state === 2) {
+              status.addClass('green');
+            }
+          });
+        })
+        .success(function() { console.log("Success"); })
+        .error(function() { console.log("Error"); })
+        .complete(function() { console.log("Complete"); });
 
       });
+
     </script>
   </head>
   <body>
