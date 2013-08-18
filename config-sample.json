@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "projects": {
+    "Project One": {
+      "jobs": [
+        {
+          "url": "https://jenkins/view/All/job/iOS-Build/api/json", "type": "build",
+          "username": "user", "password": "password"
+        },
+        {
+          "url": "https://jenkins/view/All/job/iOS-Unit-Test/api/json", "type": "test",
+          "username": "user", "password": "password"
+        },
+        {
+          "url": "https://jenkins/view/All/job/iOS-Functional-Test/api/json", "type": "test",
+          "username": "user", "password": "password"
+        },
+
+        ...
+
+      ],
+      "icon": "icon-apple"
+    },
+    "Android": {
+      "jobs": [
+        {
+          "url": "http://hudson/view/All/job/Android-Build/api/json", "type": "build"
+        },
+
+        ...
+
+      ],
+      "icon": "icon-android"
+    },
+
+    ...
+
+  }
+}
