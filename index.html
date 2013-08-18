@@ -1,7 +1,32 @@
 <html>
   <head>
     <title>Neko</title>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        function update() {
+          $.getJSON('api', function(data) {
+            $.each(data, function(index, value) {
+              $('li', {
+                'text': value['name']
+              }).appendTo('#list');
+            });
+          })
+          .success(function() { console.log("Success"); })
+          .error(function() { console.log("Error"); })
+          .complete(function() { console.log("Complete"); });
+        }
+
+        setTimeout(update, 1000);
+
+      });
+    </script>
   </head>
   <body>
+    <div id="content">
+      <ul id="list">
+      </ul>
+    </div>
   </body>
 </html>
