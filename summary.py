@@ -38,7 +38,7 @@ class Checker:
       raise Exception("Unsupported configuration version")
 
     for name, project in self.configuration['projects'].iteritems():
-      p = Project(name, image = project['image'])
+      p = Project(name, icon = project['icon'])
 
       for job in project['jobs']:
 
@@ -66,7 +66,7 @@ class Checker:
     for project in self.projects:
       status = {
         'state': project.state(),
-        'image': project.image,
+        'icon': project.icon,
         'name': project.name
       }
       projects.append(status)
@@ -76,9 +76,9 @@ class Checker:
 
 class Project:
 
-  def __init__(self, name, image):
+  def __init__(self, name, icon):
     self.name = name
-    self.image = image
+    self.icon = icon
     self.jobs = []
 
   def add(self, job):
