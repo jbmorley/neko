@@ -45,28 +45,31 @@ $(document).ready(function(){
     return item;
   };
 
-  console.log("Beginning update...");
-  $.getJSON('api', function(data) {
-    $.each(data, function(index, value) {
-      var status = getStatus(value['name'], value['icon']);
-      var state = value['state'];
-      if (state === 0) {
-        status.addClass('red');
-        status.removeClass('amber');
-        status.removeClass('green');
-      } else if (state === 1) {
-        status.addClass('amber');
-        status.removeClass('red');
-        status.removeClass('green');
-      } else if (state === 2) {
-        status.addClass('green');
-        status.removeClass('amber');
-        status.removeClass('red');
-      }
-    });
-  })
-  .success(function() { console.log("Success"); })
-  .error(function() { console.log("Error"); })
-  .complete(function() { console.log("Complete"); });
+  var update = function() {
+    console.log("Beginning update...");
+    $.getJSON('api', function(data) {
+      $.each(data, function(index, value) {
+        var status = getStatus(value['name'], value['icon']);
+        var state = value['state'];
+        if (state === 0) {
+          status.addClass('red');
+          status.removeClass('amber');
+          status.removeClass('green');
+        } else if (state === 1) {
+          status.addClass('amber');
+          status.removeClass('red');
+          status.removeClass('green');
+        } else if (state === 2) {
+          status.addClass('green');
+          status.removeClass('amber');
+          status.removeClass('red');
+        }
+      });
+    })
+    .error(function() { console.log("Unable to fetch update."); })
+  }
+
+  update();
+  setInterval(update, 60000);
 
 });
