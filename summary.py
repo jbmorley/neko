@@ -22,6 +22,7 @@ STATE_MAP = {
   "blue": STATE_GREEN,
   "yellow": STATE_AMBER,
   "red": STATE_RED,
+  "red_anime": STATE_RED,
 }
 
 class Checker:
