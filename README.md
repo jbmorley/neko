@@ -1,10 +1,12 @@
 Neko
 ====
 
-Description
+Simple web-based status board for Hudson and Jenkins.
+
+Screenshots
 -----------
 
-Simple web-based status board for Hudson and Jenkins.
+![Neko in Safari](screenshots/neko.png)
 
 Configuration
 -------------
@@ -25,5 +27,5 @@ The specifics of your configuration will depend on the location of your install 
       WSGIScriptAlias /api /usr/share/neko/api.wsgi
 
       LogLevel warn
-      
+
     </VirtualHost>
