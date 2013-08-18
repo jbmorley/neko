@@ -79,4 +79,4 @@ The Hudson and Jenkins projects to check are specified config.json located in th
 
 Things to bear in mind:
 - Hudson and Jenkins job URLs should include the 'api/json' extension
-- Icons are provided by [Font Awesome](http://fontawesome.io) and should be specified using the class names defined there (see the [cheatsheet](http://fontawesome.io/cheatsheet/))
+- Icons are provided by [Font Awesome](http://fontawesome.io) and should be specified using appropriate class names (see the [cheatsheet](http://fontawesome.io/cheatsheet/))
