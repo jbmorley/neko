@@ -41,6 +41,7 @@ STATE_MAP = {
   "disabled": STATE_GREEN,
   "blue": STATE_GREEN,
   "yellow": STATE_AMBER,
+  "yellow_anime": STATE_AMBER,
   "red": STATE_RED,
   "red_anime": STATE_RED,
 }
